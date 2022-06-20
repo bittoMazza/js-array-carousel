@@ -39,3 +39,16 @@ body{
     box-shadow:0 0 10px #111;
 }
 
+.btn-nexta{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    border-radius: 50%;
+}
+
+.btn-preva{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    border-radius: 50%;
+}

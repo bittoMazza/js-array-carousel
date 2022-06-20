@@ -9,6 +9,7 @@ const images = [
 
 let activeIndex=0;
 let newImages;
+let thumbnailContainer = document.getElementById('thumbnail-container')
 let containerImages = document.getElementById('carousel-image-container');
 for(let i = 0;i < images.length; i++){
     newImages = document.createElement("img");
@@ -17,9 +18,11 @@ for(let i = 0;i < images.length; i++){
     if(i == 0){
         newImages.classList.add('active');
     }
+    thumbnailContainer.append(newImages);
     containerImages.append(newImages);
 }
 
+console.log(thumbnailContainer)
 // Con children creiamo una lista con tutti i figli del container 
 const listImage = containerImages.children;
 const btnNext = document.getElementById('next-btn');
@@ -27,7 +30,6 @@ const btnPrev = document.getElementById('prev-btn');
 btnNext.addEventListener('click',function(){
     listImage[activeIndex].classList.remove('active');
     activeIndex++;
-
    // Quando raggiungiamo la lunghezza masssima dell'array torniamo alla posizione iniziale 
    if(activeIndex === listImage.length){
       activeIndex = 0;
@@ -39,7 +41,6 @@ btnNext.addEventListener('click',function(){
 btnPrev.addEventListener('click',function(){
     listImage[activeIndex].classList.remove('active');
     activeIndex--;
-
     // Quando andiamo sotto la posizione 0 torniamo alla lunghezza dell'array - 1
     if(activeIndex < 0){
        activeIndex = listImage.length - 1;

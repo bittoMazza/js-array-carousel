@@ -9,16 +9,20 @@ const images = [
 
 let activeIndex=0;
 let newImages;
+let newThumbImg;
 let thumbnailContainer = document.getElementById('thumbnail-container');
 let containerImages = document.getElementById('carousel-image-container');
 for(let i = 0;i < images.length; i++){
+    newThumbImg = document.createElement("img")
     newImages = document.createElement("img");
+    newThumbImg.setAttribute('src',images[i])
     newImages.setAttribute('src',images[i]);
     // Al primo elemento diamo la classe active
     if(i == 0){
+        newThumbImg.classList.add('active');
         newImages.classList.add('active');
     }
-    thumbnailContainer.append(newImages);
+    thumbnailContainer.append(newThumbImg);
     containerImages.append(newImages);
 }
 

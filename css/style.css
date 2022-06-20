@@ -21,7 +21,7 @@ body{
 }
 
 #thumbnail-container{
-    height: 100px;
+    height: 150px;
 }
 
 #thumbnail-container img{
@@ -36,5 +36,6 @@ body{
 
 #thumbnail-container img.active{
     opacity: 1;
+    box-shadow:0 0 10px #111;
 }
 

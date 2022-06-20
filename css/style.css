@@ -1,3 +1,7 @@
+body{
+    background-color: papayawhip;
+}
+
 .carousel-images img{
     display: none;
     width: 100%;
@@ -23,13 +27,14 @@
 #thumbnail-container img{
     width: 100%;
     height: 100%;
+    opacity: 0.6;
     object-fit: cover;
     object-position: center;
-    transition:all 0.5s;
+    transition:all 1s;
     border-radius: 10px;
 }
 
-.active-thumbnail{
-    border: 2px red;
+#thumbnail-container img.active{
+    opacity: 1;
 }
 
